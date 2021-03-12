@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/YiYuDuXian/ZY.git ~/js
+          git clone https://github.com/QingAnLe/ZQ-Body.git ~/js
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
