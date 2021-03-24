@@ -1,12 +1,12 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: youth_gain(中青浏览赚)
+name: 中青浏览赚（四个账号）
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '2 6,12 * * *'
+     - cron: '0 0 * * *'
   watch:
     types: youth_gain
 jobs:
@@ -15,7 +15,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
       YOUTH_START: ${{ secrets.YOUTH_START }}
-      YOUTH_END: ${{ secrets.YOUTH_END }}
+      YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
@@ -29,7 +29,7 @@ jobs:
       - name: '运行 【中青浏览赚】'
         if: env.YOUTH_START
         run: |
-          node youth_gain.js
+          node Task/youth_gain.js
         env:
           YOUTH_START: ${{ secrets.YOUTH_START }}
-          YOUTH_END: ${{ secrets.YOUTH_END }}
+          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
