@@ -13,9 +13,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
-    env:
-      YOUTH_START: ${{ secrets.YOUTH_START }}
-      YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
@@ -30,6 +27,3 @@ jobs:
         if: env.YOUTH_START
         run: |
           node Task/youth_gain.js
-        env:
-          YOUTH_START: ${{ secrets.YOUTH_START }}
-          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
