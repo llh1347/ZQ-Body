@@ -27,3 +27,6 @@ jobs:
         if: env.YOUTH_START
         run: |
           node Task/youth_gain.js
+    env:
+      YOUTH_START: ${{ secrets.YOUTH_START }}
+      YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
