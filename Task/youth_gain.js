@@ -127,7 +127,7 @@ function lookStart() {
                 $.setdata(smbody, 'youth_look');
                 $.log(startlk.message + "已自动删除")
             } else {
-                comstate = startlk.items.comtele_state;
+                comstate = startlk.items.comtele_state==0;
                 if (comstate == 0) {
                     $.log("任务开始，" + startlk.items.banner_id + startlk.message);
                     for (let j = 0; j < startlk.items.see_num - startlk.items.read_num; j++) {
