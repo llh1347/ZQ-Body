@@ -6,7 +6,7 @@ name: 中青浏览赚（四个账号）
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 8 * * *'
+     - cron: '0 0 * * *'
   watch:
     types: youth_gain
 jobs:
