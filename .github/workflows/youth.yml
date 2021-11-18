@@ -1,4 +1,4 @@
-name: 中青看点（四个账号）
+name: 中青看点（2个账号）
 
 on:
   workflow_dispatch:
